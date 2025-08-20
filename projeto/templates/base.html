@@ -1,4 +1,4 @@
-(% load static %)
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -11,6 +11,7 @@
         <title>{% block 'title' %}{% endblock %}</title>
     </head>
     <body>
-        
+        {% block 'body' %}
+        {% endblock %}
     </body>
 </html>
