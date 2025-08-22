@@ -1,4 +1,18 @@
 powershell codes:
     nova workbench ->
-        - pip freeze >> requirements.txt
-        - pip install -r .\requirements.txt
+        - pip freeze >> requirements.txt # salva as config da workbench atual
+        - pip install -r .\requirements.txt # baixa as configs
+
+    add ao db ->
+        - .\manage.py makemigrations # cria a alteração
+        - .\manage.py migrate # adiciona ao db
+
+css's:
+    cores site (cod hexa) ->
+        - marrom= 8B5E3C
+        - offwhite= F5F3EB
+        - verde= A3B18A
+        - vermelho= B35C5C
+        - preto= 2F2F2F
+        - cinza= A9A39F
+        - azul= 7B8C9E
