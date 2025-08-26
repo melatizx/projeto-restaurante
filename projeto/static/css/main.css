@@ -1,7 +1,21 @@
-body, *{
-    background-color: #F5F3EB;
+/* Navbar */
+.navbar-site,
+.navbar-nav,
+.nav-item,
+.nav-link,
+.nav-link:active,
+.navbar-brand,
+.navbar-toggler {
+    background-color: #8B5E3C;
     color: #F5F3EB;
 }
-.navbar-site{
-    background-color: #8B5E3C;
+
+.navbar {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.conteudo-principal {
+    background-color: #F5F3EB;
 }
