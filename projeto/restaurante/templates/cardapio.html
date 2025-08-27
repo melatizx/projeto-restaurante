@@ -5,5 +5,30 @@
 
 {% block 'body' %}
 {% include 'navbar.html' %}
-<h1>Cardapio</h1>
+<section class="conteudo-principal">
+    <div class="div-title">
+        <h1 class="title">Cardápio</h1>
+    </div>
+    <section class="section-cardapio">
+        {% if comidas %}
+            {% for comida in comidas %}
+                <section class="section-nome_valor_comida">
+                    <div class="div-nome-comida">
+                        <h3>{{ comida.nome_comida }}</h3>
+                    </div>
+                    <div class="div-valor-comida">
+                        <p>{{ comida.valor }}$</p>
+                    </div>
+                </section>
+                <section class="section-ingredientes-comida">
+                    <p class="ingredientes-comida">{{ comida.ingredientes }}</p>
+                </section>
+                <hr>
+            {% endfor %}
+        {% else %}
+            <p class="justificativa">Estamos trabalhando em nosso cardápio para melhor agrada-los! Volte mais tarde.</p>
+        {% endif %}
+    </section>
+</section>
+
 {% endblock %}

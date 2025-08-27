@@ -1,9 +1,9 @@
 from django.contrib import admin
-from projeto.restaurante.models import Pessoa
+from projeto.restaurante.models import Comida
 
 # Register your models here.
 
-class PessoaModelAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'email', 'data_nascimento')
+class ComidaModelAdmin(admin.ModelAdmin):
+    list_display = ('nome_comida', 'ingredientes', 'valor')
 
-admin.site.register(Pessoa, PessoaModelAdmin)
+admin.site.register(Comida, ComidaModelAdmin)
