@@ -9,6 +9,7 @@ def home(request):
 def cardapio(request):
     comidas = Comida.objects.all().order_by('nome')
     tipocomidas = TipoComida.objects.all().order_by('nome')
+    
     return render(request, 'cardapio.html', {'comidas': comidas, 'tipocomidas': tipocomidas})
 
 def reserva(request):

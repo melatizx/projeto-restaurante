@@ -10,10 +10,9 @@
         <h1 class="title">Cardápio</h1>
     </div>
     <section class="section-cardapio">
-        {{ tipocomidas }}
-        {% if tipocomidas %}
+        {% for c in tipocomidas %}
             <section class="section-por-tipo-comidas">
-                <h2 class="tipo-de-comida">{{ tipocomida.nome }}</h2>
+                <h2 class="tipo-de-comida">{{ c.nome }}</h2>
             </section>
             {% if comidas %}
                 {% for comida in comidas %}
@@ -28,14 +27,12 @@
                     <section class="section-ingredientes-comida">
                         <p class="ingredientes-comida">{{ comida.ingredientes }}</p>
                     </section>
-                    <hr>
                 {% endfor %}
             {% else %}
                 <p class="justificativa">Estamos trabalhando em nosso cardápio para melhor agrada-los! Volte mais tarde.</p>
             {% endif %}
-        {% else %}
-            <p class="justificativa">Estamos trabalhando em nosso cardápio para melhor agrada-los! Volte mais tarde.</p>
-        {% endif %}
+            <hr>
+        {% endfor %}
     </section>
 </section>
 
