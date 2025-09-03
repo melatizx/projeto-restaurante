@@ -10,28 +10,33 @@
         <h1 class="title">Cardápio</h1>
     </div>
     <section class="section-cardapio">
-        {% for c in tipocomidas %}
-            <section class="section-por-tipo-comidas">
-                <h2 class="tipo-de-comida">{{ c.nome }}</h2>
-            </section>
-            {% if comidas %}
-                {% for comida in comidas %}
-                    <section class="section-nome_valor_comida">
-                        <div class="div-nome-comida">
-                            <h3>{{ comida.nome }}</h3>
-                        </div>
-                        <div class="div-valor-comida">
-                            <p>{{ comida.valor }}$</p>
-                        </div>
+        {% for composicao in tipocomidas %}
+            {% if tipocomidas.composicao %}
+                {% for c in tipocomidas %}
+                    <section class="section-por-tipo-comidas">
+                        <h2 class="tipo-de-comida">{{ c.nome }}</h2>
                     </section>
-                    <section class="section-ingredientes-comida">
-                        <p class="ingredientes-comida">{{ comida.ingredientes }}</p>
-                    </section>
+                    {% if comidas %}
+                        {% for comida in comidas %}
+                            {% if comida.tipo.nome  == c.nome %}
+                                <section class="section-nome_valor_comida">
+                                    <div class="div-nome-comida">
+                                        <h3>{{ comida.nome }}</h3>
+                                    </div>
+                                    <div class="div-valor-comida">
+                                        <p>{{ comida.valor }}$</p>
+                                    </div>
+                                </section>
+                                <section class="section-ingredientes-comida">
+                                    <p class="ingredientes-comida">{{ comida.ingredientes }}</p>
+                                </section>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        <p class="justificativa">Estamos trabalhando em nosso cardápio para melhor agrada-los! Volte mais tarde.</p>
+                    {% endif %}
+                    <hr>
                 {% endfor %}
-            {% else %}
-                <p class="justificativa">Estamos trabalhando em nosso cardápio para melhor agrada-los! Volte mais tarde.</p>
-            {% endif %}
-            <hr>
         {% endfor %}
     </section>
 </section>
