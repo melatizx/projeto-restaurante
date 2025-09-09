@@ -16,3 +16,8 @@ css's:
         - preto= 2F2F2F
         - cinza= A9A39F
         - azul= 7B8C9E
+    
+    fontes site ->
+        - Título: Italiana → fonte inspirada na tipografia italiana antiga, elegante mas minimalista.
+        - Subtítulo: EB Garamond → uma releitura refinada da Garamond clássica.
+        - Texto: Montserrat → moderna, limpa e amigável para leitura em web.

@@ -2,19 +2,20 @@ from django.db import models
 
 # Create your models here.
 
-class TipoComida(models.Model):
-    nome = models.CharField(max_length=100)
-    desc = models.TextField()
-    COMPOSICAO_CHOICE = [
+COMPOSICAO_CHOICE = [
         ('e', 'Entradas'),
         ('p','Principais'),
         ('s','Sobremesas'),
-        ('s', 'Bebidas'),
+        ('b', 'Bebidas'),
         ('o', 'Outros'),
-    ]
+]
+class TipoComida(models.Model):
+    nome = models.CharField(max_length=100)
+    desc = models.TextField()
+
     composicao = models.CharField(
         choices=COMPOSICAO_CHOICE,
-        default='Outros',
+        default='o',
     )
     
     def __str__(self):
