@@ -65,5 +65,8 @@ def logout_user(request): # Logout de usuario
 def perfil(request): # Perfil do usuario
     return render(request, "perfil.html")
 
-def home(request): # Tela de registro/login
+def home(request):
+    return render(request, "home.html")
+
+def enter(request):
     return render(request, "enter.html")

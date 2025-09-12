@@ -8,3 +8,6 @@ class Usuario(AbstractUser):
     cpf = BRCPFField(unique=True)
     numero = PhoneNumberField(region="BR", unique=True)
     email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return self.nome
